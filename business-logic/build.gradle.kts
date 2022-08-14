@@ -19,9 +19,12 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
-    // 새로운 source set 을 만들었으므로 아래와 같은 함수를 call 할 수 있다.
-    // my-java-base plugin >> sourceSets.create("integrationTest")
-    //integrationTestImplementation("")
+    // source set 마다 dependency scope 을 설정할 수 있다.
+    // 새로운 source set 을 만들었으므로 아래와 같은 함수를 call 할 수 있다. my-java-base plugin >> sourceSets.create("integrationTest")
+    integrationTestImplementation("org.junit.jupiter:junit-jupiter-api")
+    integrationTestRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+
 
 
     /*
