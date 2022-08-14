@@ -19,7 +19,7 @@ dependencyResolutionManagement {
 
 //    includeBuild("../my-other-project")
 
-    //includeBuild("gradle/platform")
+    includeBuild("gradle/platform")
 
 }
 
