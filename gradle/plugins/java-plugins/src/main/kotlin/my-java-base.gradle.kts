@@ -3,6 +3,14 @@ plugins {
     id("com.diffplug.spotless")
 }
 
+//sourceSets.main {
+//    java.setSrcDirs(listOf(layout.projectDirectory.dir("sources")))
+//}
+//sourceSets.test
+
+// 새로운 source set 생성
+sourceSets.create("integrationTest")
+
 // TaskContainer 를 사용하여 플러그인에 의해 등록된 task 를 세팅할 수 있다.
 // 또는 task type 이나 이름으로 task 에 접근할 수도 있다.
 // task 직접 세팅하기 보다는 extension 세팅이 더 좋은 방법이다. (가능하다면)
