@@ -3,13 +3,15 @@ plugins {
 }
 
 dependencies {
+    implementation(platform("com.example:platform"))
+
     implementation(project(":data-model"))
-    implementation("org.apache.commons:commons-lang3:3.12.0")
+    implementation("org.apache.commons:commons-lang3")
 
     /*
     slf4j implementation 모듈은 runtime 시에만 필요 --> 따라서 app module 에서는 implementation 모듈을 runtimeOnly 로 등록
      */
-    implementation("org.slf4j:slf4j-api:1.7.36")
+    implementation("org.slf4j:slf4j-api")
 
     /*
     org.apache.commons.lang3.StringUtils 과 같은 commons-lang3에 정의되어 있는 클래스가 app module 에서도 사용가능하게 된다.
@@ -29,4 +31,8 @@ dependencies {
 //configurations {
 //    compileClasspath    // <- Compile time "view" (aka Variant) // implementation, compileOnly, ...
 //    runtimeClasspath    // <- Runtime "view" (aka Variant) // implementation, runtimeOnly, ...
+//}
+
+//dependencies.constraints {
+//    implementation("org.apache.commons:commons-lang3:3.12.0")
 //}
